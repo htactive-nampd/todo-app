@@ -11,14 +11,6 @@ app.get("/", function (request, response) {
     response.send("hello api.")
 })
 
-app.post('/test-page', function(req, res) {
-    var name = req.body.name,
-        color = req.body.color;
-    // ...
-    console.log(name)
-    console.log(color)
-});
-
 app.route("/api")
     .get(controller.getlist)
     .post(controller.post)
